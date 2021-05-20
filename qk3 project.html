@@ -189,10 +189,10 @@
     <script>
       function drive() {
         let name = prompt("what is your name?");
-        let age = prompt("what is your age?");
+        let  age  = prompt("what is your age?");
         let car = prompt("what is your favourite car?");
 
-        if (age < 18) {
+        if (age <= 16) {
           alert(
             "Hi " +
               name +
@@ -202,7 +202,20 @@
               car + " in Japan😭"
           );
         }
-        if (age > 19) {
+        else if (age == 17 ) 
+        {
+          alert(
+            "Hi " +
+              name +
+              "! You are " +
+              age +
+              " years old so you almost can drive a " +
+              car +
+              " in Japan!🙌"
+          );
+        }else
+		{
+		
           alert(
             "Hi " +
               name +
@@ -212,18 +225,10 @@
               car +
               " in Japan!🙌"
           );
-        } else {
-          alert(
-            "Hi " +
-              name +
-              "! You are " +
-              age +
-              " years old so you can drive a " +
-              car +
-              " in Japan!🙌"
-          );
-        }
+		
+		
       }
+    }
       let drivebutton = document.querySelector(".drive-button");
       drivebutton.addEventListener("click", drive);
     </script>
